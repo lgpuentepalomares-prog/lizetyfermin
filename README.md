@@ -6,7 +6,7 @@
     <title>Nuestra Boda - Fermín y Lizet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -151,26 +151,26 @@
         }
 
         /* -------------------------------------------
-           CONTENIDO PRINCIPAL
+           CONTENIDO PRINCIPAL Y ESPACIADOS GENERALES
         ------------------------------------------- */
         #main-content {
             opacity: 0;
             visibility: hidden;
             transition: opacity 1.5s ease 0.6s;
-            padding-bottom: 80px;
+            padding-bottom: 120px; /* Mayor espacio al final de la página */
             position: relative;
         }
 
         .botanical-decor {
             position: absolute;
-            width: 130px;
+            width: 140px;
             height: auto;
             opacity: 0.12;
             pointer-events: none;
             z-index: 0;
         }
-        .top-left { top: 20px; left: 20px; }
-        .bottom-right { bottom: 100px; right: 20px; transform: rotate(180deg); }
+        .top-left { top: 40px; left: 40px; }
+        .bottom-right { bottom: 140px; right: 40px; transform: rotate(180deg); }
 
         body.revealed #envelope-container {
             opacity: 0;
@@ -183,8 +183,9 @@
             visibility: visible;
         }
 
+        /* Secciones con un padding vertical más generoso y elegante */
         .hero {
-            padding: 70px 20px 40px 20px;
+            padding: 120px 20px 80px 20px;
             background: var(--cream);
             position: relative;
             z-index: 1;
@@ -192,44 +193,68 @@
 
         .verse {
             font-style: italic;
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin: 0 auto 35px auto;
+            font-size: 1.35rem;
+            max-width: 650px;
+            margin: 0 auto 60px auto; /* Mayor separación con los nombres de los padres */
             color: #444;
-            line-height: 1.6;
+            line-height: 1.7;
             padding: 0 15px;
         }
 
         .parents-section {
-            font-size: 1.1rem;
-            margin-bottom: 35px;
+            font-size: 1.15rem;
+            margin-bottom: 60px; /* Separación amplia hacia la frase de invitación */
             letter-spacing: 1px;
-            line-height: 1.8;
+            line-height: 2;
         }
 
         .parents-title {
             font-size: 0.9rem;
             text-transform: uppercase;
             color: var(--gold);
-            margin-bottom: 12px;
+            margin-bottom: 20px;
             letter-spacing: 2px;
             font-weight: 600;
         }
 
-        .names {
-            font-family: 'Alex Brush', cursive;
-            font-size: 4.5rem;
-            color: var(--burgundy);
-            margin: 30px 0;
-            font-weight: 400;
+        /* Contenedor Destacado de Nombres */
+        .wedding-names-container {
+            margin: 50px auto 60px auto;
+            max-width: 850px;
+            padding: 0 15px;
         }
 
-        .names span {
-            display: block;
+        .wedding-names-container h1 {
+            font-family: 'Alex Brush', cursive;
+            font-size: 5.5rem;
+            color: var(--burgundy);
+            font-weight: 400;
+            line-height: 1.1;
+            margin: 0;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.02);
+        }
+
+        .name-connector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0;
+        }
+
+        .name-connector span.line {
+            flex: 1;
+            max-width: 80px;
+            height: 1px;
+        }
+
+        .name-connector span.text {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.9rem;
+            font-size: 2rem;
+            font-style: italic;
             color: var(--gold);
-            margin: -5px 0;
+            margin: 0 25px;
+            font-weight: 400;
+            font-variant: lowercase;
         }
 
         .date-display {
@@ -237,35 +262,35 @@
             border-top: 1px solid var(--gold);
             border-bottom: 1px solid var(--gold);
             display: inline-block;
-            padding: 12px 35px;
-            margin: 25px 0;
-            letter-spacing: 2px;
+            padding: 16px 45px;
+            margin: 40px 0;
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
 
         .countdown-container {
-            margin: 35px 0 15px 0;
+            margin: 50px 0 30px 0;
         }
         
         .countdown {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 20px;
+            margin-top: 25px;
         }
 
         .time-box {
             background: white;
-            padding: 14px;
+            padding: 18px 16px;
             border-radius: 6px;
-            min-width: 75px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.03);
-            border: 1px solid rgba(197, 160, 89, 0.2);
+            min-width: 85px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.02);
+            border: 1px solid rgba(197, 160, 89, 0.15);
         }
 
         .time-box span {
             display: block;
-            font-size: 1.7rem;
+            font-size: 1.9rem;
             font-weight: 600;
             color: var(--burgundy);
         }
@@ -274,27 +299,27 @@
             display: block;
             font-size: 0.75rem;
             text-transform: uppercase;
-            color: #666;
+            color: #777;
             letter-spacing: 1px;
-            margin-top: 3px;
+            margin-top: 5px;
         }
 
         /* Carrusel de Fotos */
         .slideshow-section {
-            padding: 20px 20px 50px 20px;
+            padding: 80px 20px 100px 20px; /* Espaciado premium para aislar la galería */
             background: var(--cream);
-            border-bottom: 1px solid rgba(197, 160, 89, 0.25);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
         }
 
         .slideshow-container {
-            max-width: 450px;
+            max-width: 480px;
             position: relative;
             margin: 0 auto;
-            height: 550px;
+            height: 580px;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 4px solid white;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 6px solid white;
         }
 
         .mySlides {
@@ -324,21 +349,21 @@
             position: absolute;
             top: 50%;
             width: auto;
-            padding: 16px;
-            margin-top: -22px;
+            padding: 18px;
+            margin-top: -24px;
             color: white;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px;
             transition: 0.3s ease;
-            border-radius: 0 3px 3px 0;
+            border-radius: 0 4px 4px 0;
             user-select: none;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.25);
             text-decoration: none;
             z-index: 10;
         }
 
-        .prev { left: 0; border-radius: 0 3px 3px 0; }
-        .next { right: 0; border-radius: 3px 0 0 3px; }
+        .prev { left: 0; border-radius: 0 4px 4px 0; }
+        .next { right: 0; border-radius: 4px 0 0 4px; }
 
         .prev:hover, .next:hover {
             background-color: var(--burgundy);
@@ -346,15 +371,15 @@
 
         .dot-container {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 25px;
         }
 
         .dot {
             cursor: pointer;
-            height: 10px;
-            width: 10px;
-            margin: 0 4px;
-            background-color: #bbb;
+            height: 9px;
+            width: 9px;
+            margin: 0 6px;
+            background-color: #ccc;
             border-radius: 50%;
             display: inline-block;
             transition: background-color 0.6s ease;
@@ -367,43 +392,43 @@
         /* Detalles e Iglesia */
         .details {
             background-color: white;
-            padding: 70px 20px;
-            border-bottom: 1px solid rgba(197, 160, 89, 0.25);
+            padding: 110px 20px; /* Sección limpia y muy bien espaciada */
+            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
             position: relative;
             z-index: 1;
         }
 
         .section-title {
-            font-size: 1.9rem;
+            font-size: 2rem;
             color: var(--burgundy);
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         .event-info {
-            font-size: 1.25rem;
-            margin-bottom: 35px;
-            line-height: 1.8;
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            line-height: 1.9;
         }
 
         .location-link {
             display: block;
-            max-width: 450px;
+            max-width: 480px;
             margin: 0 auto;
-            padding: 24px;
+            padding: 30px 24px;
             background-color: var(--cream);
-            border: 1px solid rgba(197, 160, 89, 0.35);
+            border: 1px solid rgba(197, 160, 89, 0.25);
             border-radius: 8px;
             text-decoration: none;
             color: var(--charcoal);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.01);
         }
 
         .location-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(107, 29, 47, 0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(107, 29, 47, 0.06);
             border-color: var(--burgundy);
         }
 
@@ -411,76 +436,48 @@
             font-weight: 600;
             color: var(--burgundy);
             letter-spacing: 1px;
-            font-size: 1.45rem;
+            font-size: 1.5rem;
         }
 
         .address-text {
             font-size: 1.1rem;
             color: #555;
-            margin-top: 6px;
+            margin-top: 8px;
         }
 
         .map-hint {
             display: inline-block;
-            margin-top: 14px;
+            margin-top: 16px;
             font-size: 0.85rem;
             text-transform: uppercase;
             color: var(--gold);
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             font-weight: 600;
         }
 
         .schedule {
-            margin: 35px 0;
-            font-size: 1.15rem;
-            line-height: 2;
+            margin: 55px 0;
+            font-size: 1.2rem;
+            line-height: 2.2;
         }
 
         .padrinos {
-            margin-top: 40px;
-            font-size: 1.25rem;
-            line-height: 1.8;
+            margin-top: 60px;
+            font-size: 1.3rem;
+            line-height: 1.9;
         }
 
-        /* Código de Vestimenta */
-        .dress-code-section {
-            padding: 70px 20px;
-            background-color: var(--cream);
-            position: relative;
-            z-index: 1;
+        .padrinos p:not(.parents-title) {
+            margin-bottom: 6px;
         }
 
-        .dress-card {
-            max-width: 550px;
-            margin: 0 auto;
-            background: white;
-            padding: 45px 30px;
-            border-radius: 8px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
-            border: 1px solid rgba(197, 160, 89, 0.25);
-        }
-
-        .dress-title {
-            font-size: 1.5rem;
-            color: var(--burgundy);
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .dress-rules {
-            font-size: 1.25rem;
-            line-height: 1.8;
-            color: #444;
-        }
-
-        .color-highlight {
-            color: #a22c45;
-            font-weight: 600;
-            display: block;
-            margin-top: 12px;
-            font-size: 1.2rem;
-            letter-spacing: 0.5px;
+        /* Ajustes responsivos para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .wedding-names-container h1 { font-size: 3.8rem; }
+            .hero { padding-top: 90px; }
+            .details { padding: 80px 20px; }
+            .slideshow-section { padding: 60px 20px; }
+            .slideshow-container { height: 440px; }
         }
     </style>
 </head>
@@ -509,13 +506,23 @@
             
             <div class="parents-section">
                 <p class="parents-title">Con la bendición de Dios y de nuestros padres</p>
-                <p>Rafael Puente Ramírez  |  Ricardo Rodríguez Cano</p>
-                <p>Josefina Palomares Zavala  |  Angelina Piña Piña</p>
+                <p>Rafael Puente Ramírez  |  Ricardo Rodríguez Cano</p>
+                <p>Josefina Palomares Zavala  |  Angelina Piña Piña</p>
             </div>
 
-            <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; color: #555;">Tenemos el honor de invitarlos a celebrar nuestra boda</p>
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 4px; color: #666; margin-bottom: 10px; font-weight: 300;">
+                Tenemos el honor de invitarlos a celebrar nuestra boda
+            </p>
             
-            <h1 class="names">Fermín Rodríguez Piña <span>y</span> Lizet Puente Palomares</h1>
+            <div class="wedding-names-container">
+                <h1>Fermín Rodríguez Piña</h1>
+                <div class="name-connector">
+                    <span class="line" style="background: linear-gradient(to left, var(--gold), transparent);"></span>
+                    <span class="text">y</span>
+                    <span class="line" style="background: linear-gradient(to right, var(--gold), transparent);"></span>
+                </div>
+                <h1>Lizet Puente Palomares</h1>
+            </div>
             
             <div class="date-display">
                 Sábado • 24 Octubre • 2026
@@ -583,16 +590,6 @@
                 <p class="parents-title">Padrinos de Velación</p>
                 <p>Salvador Puente Ramírez</p>
                 <p>Rocío Palomares Zavala</p>
-            </div>
-        </section>
-
-        <section class="dress-code-section">
-            <div class="dress-card">
-                <h3 class="dress-title">Código de Vestimenta</h3>
-                <p class="dress-rules">
-                    Formal de Etiqueta. Queremos que luzcan espectaculares en nuestro día especial. Siéntanse libres de venir vestidos totalmente como gusten, 
-                    <span class="color-highlight">¡pero si gustan, nos encantaría que nos acompañaran vistiendo de color Burgundy (Guindo / Vino)!</span>
-                </p>
             </div>
         </section>
 
