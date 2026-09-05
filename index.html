@@ -4,7 +4,6 @@
     <!-- Redes Sociales / Vista Previa del Link -->
     <meta property="og:title" content="Nuestra Boda — Fermín & Lizet 🤍" />
     <meta property="og:description" content="¡Nos casamos! Toca el sello de cera para abrir nuestra invitación virtual y ver los detalles." />
-    <!-- Updated to your new preview image below -->
     <meta property="og:image" content="https://lgpuentepalomares-prog.github.io/lizetyfermin/IMG_4714.jpeg" />
     <meta property="og:url" content="https://lgpuentepalomares-prog.github.io/lizetyfermin/" />
     <meta property="og:type" content="website" />
@@ -14,7 +13,6 @@
     <meta name="twitter:url" content="https://lgpuentepalomares-prog.github.io/lizetyfermin/" />
     <meta name="twitter:title" content="Lizet & Fermín" />
     <meta name="twitter:description" content="Welcome to our website! Check out our details, updates, and more here." />
-    <!-- Updated to your new preview image below -->
     <meta name="twitter:image" content="https://lgpuentepalomares-prog.github.io/lizetyfermin/IMG_4714.jpeg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -379,7 +377,7 @@
             background-color: var(--burgundy);
         }
 
-        /* Detalles e Iglesia */
+        /* Detalles e Información */
         .details {
             background-color: white;
             padding: 70px 20px;
@@ -391,9 +389,18 @@
         .section-title {
             font-size: 1.9rem;
             color: var(--burgundy);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
+        }
+
+        .location-note {
+            font-size: 1.15rem;
+            max-width: 520px;
+            margin: 0 auto 30px auto;
+            color: #555;
+            line-height: 1.6;
+            font-style: italic;
         }
 
         .event-info {
@@ -402,10 +409,9 @@
             line-height: 1.8;
         }
 
-        .location-link {
-            display: block;
-            max-width: 450px;
-            margin: 0 auto;
+        .info-card {
+            max-width: 480px;
+            margin: 0 auto 25px auto;
             padding: 24px;
             background-color: var(--cream);
             border: 1px solid rgba(197, 160, 89, 0.35);
@@ -414,19 +420,29 @@
             color: var(--charcoal);
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            display: block;
         }
 
-        .location-link:hover {
+        .info-card.interactive:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(107, 29, 47, 0.08);
             border-color: var(--burgundy);
         }
 
-        .church-name {
+        .card-subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--gold);
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .venue-name {
             font-weight: 600;
             color: var(--burgundy);
             letter-spacing: 1px;
-            font-size: 1.45rem;
+            font-size: 1.4rem;
         }
 
         .address-text {
@@ -451,8 +467,16 @@
             line-height: 2;
         }
 
+        .closing-phrase {
+            font-family: 'Alex Brush', cursive;
+            font-size: 2.8rem;
+            color: var(--burgundy);
+            margin: 45px 15px 35px 15px;
+            line-height: 1.3;
+        }
+
         .padrinos {
-            margin-top: 40px;
+            margin-top: 30px;
             font-size: 1.25rem;
             line-height: 1.8;
         }
@@ -510,7 +534,6 @@
                 <div class="mySlides fade-effect">
                     <img src="IMG_3767.jpg" alt="Fermín y Lizet 1">
                 </div>
-                <!-- Replaced old second picture with your new image asset -->
                 <div class="mySlides fade-effect">
                     <img src="IMG_4536.HEIC" alt="Fermín y Lizet 2">
                 </div>
@@ -558,21 +581,37 @@
         </section>
 
         <section class="details">
-            <h2 class="section-title">Detalles del Evento</h2>
+            <h2 class="section-title">INFORMACIÓN PARA NUESTROS INVITADOS</h2>
+            
+            <p class="location-note">Todo el evento se llevará a cabo en las mismas instalaciones, ya que la iglesia, el salón de recepción y el estacionamiento están juntos uno al lado del otro.</p>
+            
             <div class="event-info">
                 
-                <a href="https://www.google.com/maps/place/St+James+Catholic+Church/@38.55494,-121.7509779,758m/data=!3m2!1e3!4b1!4m6!3m5!1s0x808529a344a5c52b:0xb55a3f7cec611723!8m2!3d38.55494!4d-121.748403!16s%2Fg%2F1vd3w03w?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="location-link">
-                    <p class="church-name">ST. JAMES CATHOLIC CHURCH</p>
+                <!-- Ceremonia & Recepción -->
+                <a href="https://www.google.com/maps/place/St+James+Catholic+Church/@38.55494,-121.7509779,758m/data=!3m2!1e3!4b1!4m6!3m5!1s0x808529a344a5c52b:0xb55a3f7cec611723!8m2!3d38.55494!4d-121.748403!16s%2Fg%2F1vd3w03w?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="info-card interactive">
+                    <p class="card-subtitle">Ceremonia & Recepción</p>
+                    <p class="venue-name">ST. JAMES CATHOLIC CHURCH</p>
+                    <p class="address-text"><strong>Salón de Recepción:</strong> St. James Memorial Center</p>
                     <p class="address-text">1275 B St, Davis, CA 95616</p>
                     <span class="map-hint">📍 Ver Mapa y Direcciones</span>
                 </a>
-                
+
+                <!-- Estacionamiento -->
+                <a href="https://www.google.com/maps/place/204+W+14th+St/@38.5553971,-121.7491442,3a,75y,329.69h,90t/data=!3m4!1e1!3m2!1sQXyFLibK9eMlASrl7lz7qw!2e0!4m2!3m1!1s0x808529a4b46a6783:0x80da8568b70f9066?sa=X&ved=1t:3780&ictx=111" target="_blank" class="info-card interactive">
+                    <p class="card-subtitle">Estacionamiento</p>
+                    <p class="venue-name">Detrás de la iglesia</p>
+                    <p class="address-text">Entrada por W 14th St / Edwards St</p>
+                    <span class="map-hint">📍 Ver Mapa y Direcciones</span>
+                </a>
+
                 <div class="schedule">
                     <p><strong>Misa:</strong> 2:00 PM</p>
                     <p><strong>Comida:</strong> 3:00 PM - 6:00 PM</p>
                     <p><strong>Baile:</strong> 6:00 PM - 10:00 PM</p>
                 </div>
             </div>
+
+            <p class="closing-phrase">¡Los esperamos para compartir con nosotros este día tan especial!</p>
 
             <div class="padrinos">
                 <p class="parents-title">Padrinos de Velación</p>
@@ -663,5 +702,7 @@
             }, 3500);
         }
     </script>
+</body>
+</html>
 </body>
 </html>
