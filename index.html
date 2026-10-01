@@ -206,16 +206,6 @@
             z-index: 1;
         }
 
-        .verse {
-            font-style: italic;
-            font-size: 1.5rem;
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-            color: #333;
-            line-height: 1.7;
-            padding: 0 15px;
-        }
-
         .parents-section {
             font-size: 1.3rem;
             margin-bottom: 40px;
@@ -339,29 +329,35 @@
             to { opacity: 1; }
         }
 
+        /* Navigation Slider Buttons */
         .prev, .next {
             cursor: pointer;
             position: absolute;
             top: 50%;
-            width: auto;
-            padding: 18px 14px;
-            margin-top: -25px;
+            transform: translateY(-50%);
+            padding: 16px;
             color: white;
             font-weight: bold;
-            font-size: 22px;
+            font-size: 24px;
             transition: 0.3s ease;
-            border-radius: 0 4px 4px 0;
             user-select: none;
-            background-color: rgba(0, 0, 0, 0.35);
+            background-color: rgba(107, 29, 47, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.4);
             text-decoration: none;
-            z-index: 10;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 54px;
         }
 
-        .prev { left: 0; border-radius: 0 4px 4px 0; }
-        .next { right: 0; border-radius: 4px 0 0 4px; }
+        .prev { left: 0; border-radius: 0 8px 8px 0; }
+        .next { right: 0; border-radius: 8px 0 0 8px; }
 
         .prev:hover, .next:hover {
             background-color: var(--burgundy);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
         .dot-container {
@@ -474,25 +470,39 @@
             line-height: 2.2;
         }
 
-        .thank-you-section {
-            max-width: 600px;
-            margin: 40px auto 20px auto;
-            padding: 0 15px;
+        /* Redesigned Thank You Card */
+        .thank-you-card {
+            max-width: 560px;
+            margin: 50px auto 30px auto;
+            padding: 35px 25px;
+            background-color: var(--cream);
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.15);
+            position: relative;
+        }
+
+        .thank-you-card::before {
+            content: "✦";
+            display: block;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 10px;
         }
 
         .thank-you-title {
-            font-size: 1.1rem;
+            font-size: 1.6rem;
             text-transform: uppercase;
-            color: var(--gold);
-            letter-spacing: 2px;
+            color: var(--burgundy);
+            letter-spacing: 3px;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .thank-you-text {
-            font-size: 1.3rem;
-            color: #444;
-            line-height: 1.7;
+            font-size: 1.45rem;
+            color: #333;
+            line-height: 1.8;
             font-style: italic;
         }
 
@@ -531,9 +541,6 @@
 
             .hero {
                 padding: 50px 15px 30px 15px;
-            }
-            .verse {
-                font-size: 1.35rem;
             }
             .parents-section {
                 font-size: 1.2rem;
@@ -586,8 +593,15 @@
                 font-size: 1.35rem;
                 line-height: 2.2;
             }
+            .thank-you-card {
+                padding: 25px 18px;
+                margin: 35px auto 20px auto;
+            }
+            .thank-you-title {
+                font-size: 1.35rem;
+            }
             .thank-you-text {
-                font-size: 1.2rem;
+                font-size: 1.25rem;
             }
             .closing-phrase {
                 font-size: 3rem;
@@ -616,8 +630,6 @@
         </svg>
 
         <section class="hero">
-            <p class="verse">“Así que ya no son dos, sino uno solo. Por tanto, lo que Dios ha unido, que no lo separe el hombre”</p>
-            
             <div class="parents-section">
                 <p class="parents-title">Con la bendición de Dios y de nuestros padres</p>
                 <p>Rafael Puente Ramírez  |  Ricardo Rodríguez Cano</p>
@@ -673,13 +685,13 @@
                 </div>
                 <div class="mySlides fade-effect">
                     <img src="IMG_5307.jpeg" alt="Fermín y Lizet 10">
-                         </div>
+                </div>
                 <div class="mySlides fade-effect">
-                    <img src="IMG_5382.jpeg" alt="Fermín y Lizet 11">
-                  </div>
+                    <img src="IMG_5560.jpeg" alt="Fermín y Lizet 11">
+                </div>
                 <div class="mySlides fade-effect">
                     <img src="FullSizeRender.heic" alt="Fermín y Lizet 12">
-                
+                </div>
 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" onclick="plusSlides(1)">❯</a>
@@ -696,6 +708,8 @@
                 <span class="dot" onclick="currentSlide(8)"></span>
                 <span class="dot" onclick="currentSlide(9)"></span>
                 <span class="dot" onclick="currentSlide(10)"></span>
+                <span class="dot" onclick="currentSlide(11)"></span>
+                <span class="dot" onclick="currentSlide(12)"></span>
             </div>
         </section>
 
@@ -733,11 +747,11 @@
                 </div>
             </div>
 
-            <!-- Nuestro Agradecimiento -->
-            <div class="thank-you-section">
-                <p class="thank-you-title">NUESTRO AGRADECIMIENTO</p>
+            <!-- Redesigned Thank You Section -->
+            <div class="thank-you-card">
+                <p class="thank-you-title">Nuestro Agradecimiento</p>
                 <p class="thank-you-text">
-                    Queremos agradecer de todo corazón a nuestras familias, padrinos y amigos que nos han apoyado para hacer este día posible.
+                    Queremos agradecer de todo corazón a nuestras familias, padrinos y amigos que nos han apoyado con tanto amor para hacer este día posible.
                 </p>
             </div>
 
