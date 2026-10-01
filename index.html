@@ -474,11 +474,33 @@
             line-height: 2.2;
         }
 
+        .thank-you-section {
+            max-width: 600px;
+            margin: 40px auto 20px auto;
+            padding: 0 15px;
+        }
+
+        .thank-you-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            color: var(--gold);
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .thank-you-text {
+            font-size: 1.3rem;
+            color: #444;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
         .closing-phrase {
             font-family: 'Alex Brush', cursive;
             font-size: 3.5rem;
             color: var(--burgundy);
-            margin: 50px 15px 10px 15px;
+            margin: 30px 15px 10px 15px;
             line-height: 1.3;
         }
 
@@ -564,6 +586,9 @@
                 font-size: 1.35rem;
                 line-height: 2.2;
             }
+            .thank-you-text {
+                font-size: 1.2rem;
+            }
             .closing-phrase {
                 font-size: 3rem;
             }
@@ -647,8 +672,14 @@
                     <img src="ec85c0d7-7582-47f3-9901-69abd7e41950.JPG" alt="Fermín y Lizet 9">
                 </div>
                 <div class="mySlides fade-effect">
-                    <img src="FullSizeRender.heic" alt="Fermín y Lizet 10">
-                </div>
+                    <img src="IMG_5307.jpeg" alt="Fermín y Lizet 10">
+                         </div>
+                <div class="mySlides fade-effect">
+                    <img src="IMG_5382.jpeg" alt="Fermín y Lizet 11">
+                  </div>
+                <div class="mySlides fade-effect">
+                    <img src="FullSizeRender.heic" alt="Fermín y Lizet 12">
+                
 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" onclick="plusSlides(1)">❯</a>
@@ -671,32 +702,43 @@
         <section class="details">
             <h2 class="section-title">INFORMACIÓN PARA NUESTROS INVITADOS</h2>
             
-            <p class="location-note">Todo el evento se llevará a cabo en las mismas instalaciones, ya que la iglesia, el salón de recepción y el estacionamiento están juntos uno al lado del otro.</p>
+            <p class="location-note">
+                Todo el evento se llevará a cabo en las mismas instalaciones. Para su comodidad, les recomendamos estacionarse primero en la parte posterior; un caminito peatonal los llevará directamente a la iglesia para la misa y al salón para la recepción.
+            </p>
             
             <div class="event-info">
                 
-                <!-- Ceremonia & Recepción -->
+                <!-- Paso 1: Estacionamiento -->
+                <a href="https://www.google.com/maps/place/204+W+14th+St/@38.5553971,-121.7491442,3a,75y,329.69h,90t/data=!3m4!1e1!3m2!1sQXyFLibK9eMlASrl7lz7qw!2e0!4m2!3m1!1s0x808529a4b46a6783:0x80da8568b70f9066?sa=X&ved=1t:3780&ictx=111" target="_blank" class="info-card interactive">
+                    <p class="card-subtitle">1. Estacionamiento Principal</p>
+                    <p class="venue-name">DETRÁS DE LA IGLESIA</p>
+                    <p class="address-text"><strong>Entrada por:</strong> W 14th St / Edwards St</p>
+                    <span class="map-hint">📍 Ver Mapa del Estacionamiento</span>
+                </a>
+
+                <!-- Paso 2: Ceremonia & Recepción -->
                 <a href="https://www.google.com/maps/place/St+James+Catholic+Church/@38.55494,-121.7509779,758m/data=!3m2!1e3!4b1!4m6!3m5!1s0x808529a344a5c52b:0xb55a3f7cec611723!8m2!3d38.55494!4d-121.748403!16s%2Fg%2F1vd3w03w?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="info-card interactive">
-                    <p class="card-subtitle">Ceremonia & Recepción</p>
+                    <p class="card-subtitle">2. Ceremonia & Recepción</p>
                     <p class="venue-name">ST. JAMES CATHOLIC CHURCH</p>
                     <p class="address-text"><strong>Salón de Recepción:</strong> St. James Memorial Center</p>
                     <p class="address-text">1275 B St, Davis, CA 95616</p>
-                    <span class="map-hint">📍 Ver Mapa y Direcciones</span>
+                    <span class="map-hint">📍 Ver Mapa del Lugar</span>
                 </a>
 
-                <!-- Estacionamiento -->
-                <a href="https://www.google.com/maps/place/204+W+14th+St/@38.5553971,-121.7491442,3a,75y,329.69h,90t/data=!3m4!1e1!3m2!1sQXyFLibK9eMlASrl7lz7qw!2e0!4m2!3m1!1s0x808529a4b46a6783:0x80da8568b70f9066?sa=X&ved=1t:3780&ictx=111" target="_blank" class="info-card interactive">
-                    <p class="card-subtitle">Estacionamiento</p>
-                    <p class="venue-name">Detrás de la iglesia</p>
-                    <p class="address-text">Entrada por W 14th St / Edwards St</p>
-                    <span class="map-hint">📍 Ver Mapa y Direcciones</span>
-                </a>
-
+                <!-- Itinerario -->
                 <div class="schedule">
                     <p><strong>Misa:</strong> 2:00 PM</p>
                     <p><strong>Comida:</strong> 3:00 PM - 6:00 PM</p>
                     <p><strong>Baile:</strong> 6:00 PM - 10:00 PM</p>
                 </div>
+            </div>
+
+            <!-- Nuestro Agradecimiento -->
+            <div class="thank-you-section">
+                <p class="thank-you-title">NUESTRO AGRADECIMIENTO</p>
+                <p class="thank-you-text">
+                    Queremos agradecer de todo corazón a nuestras familias, padrinos y amigos que nos han apoyado para hacer este día posible.
+                </p>
             </div>
 
             <p class="closing-phrase">¡Los esperamos para compartir con nosotros este día tan especial!</p>
