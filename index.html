@@ -15,7 +15,7 @@
     <meta name="twitter:description" content="Welcome to our website! Check out our details, updates, and more here." />
     <meta name="twitter:image" content="https://lgpuentepalomares-prog.github.io/lizetyfermin/IMG_4714.jpeg" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Nuestra Boda - Fermín y Lizet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,10 +43,12 @@
             text-align: center;
             overflow-x: hidden;
             min-height: 100vh;
+            font-size: 1.3rem;
+            line-height: 1.7;
         }
 
         /* -------------------------------------------
-           PANTALLA DEL SOBRE INTERACTIVO
+            PANTALLA DEL SOBRE INTERACTIVO
         ------------------------------------------- */
         #envelope-container {
             position: fixed;
@@ -66,19 +68,19 @@
 
         .envelope-wrapper {
             position: relative;
-            width: 300px;
-            height: 200px;
+            width: 360px;
+            height: 240px;
             background-color: var(--burgundy);
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
             cursor: pointer;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             transform-style: preserve-3d;
             transition: transform 0.5s ease;
         }
 
         .envelope-wrapper:hover {
-            transform: scale(1.03) translateY(-5px);
+            transform: scale(1.04) translateY(-6px);
         }
 
         .flap {
@@ -87,10 +89,10 @@
             left: 0;
             width: 0;
             height: 0;
-            border-left: 150px solid transparent;
-            border-right: 150px solid transparent;
-            border-top: 110px solid var(--dark-burgundy);
-            border-radius: 4px 4px 0 0;
+            border-left: 180px solid transparent;
+            border-right: 180px solid transparent;
+            border-top: 130px solid var(--dark-burgundy);
+            border-radius: 6px 6px 0 0;
             transform-origin: top;
             transition: transform 0.8s ease;
             z-index: 4;
@@ -105,22 +107,22 @@
             background: linear-gradient(30deg, #5c1828 50%, transparent 50%),
                         linear-gradient(-30deg, #5c1828 50%, transparent 50%);
             z-index: 3;
-            border-radius: 0 0 8px 8px;
+            border-radius: 0 0 10px 10px;
         }
 
         .gold-seal {
             position: absolute;
-            top: 90px;
-            left: 130px;
-            width: 42px;
-            height: 42px;
+            top: 105px;
+            left: 154px;
+            width: 52px;
+            height: 52px;
             background: radial-gradient(circle, #e8cb8d 0%, #c5a059 70%, #9a7633 100%);
             border-radius: 46% 52% 48% 54% / 50% 46% 54% 48%;
             z-index: 5;
             box-shadow: 
                 inset -2px -2px 4px rgba(0,0,0,0.4),
                 inset 2px 2px 4px rgba(255,255,255,0.6),
-                0 4px 10px rgba(0,0,0,0.3);
+                0 4px 12px rgba(0,0,0,0.35);
             transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
@@ -131,20 +133,21 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-family: 'Cormorant Garamond', serif;
-            font-size: 0.75rem;
+            font-size: 0.95rem;
             font-weight: bold;
             color: #634d22;
             text-shadow: 1px 1px 1px rgba(255,255,255,0.4);
             letter-spacing: 1px;
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
         .click-hint {
-            font-size: 1.1rem;
+            font-size: 1.35rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--burgundy);
             animation: pulse 2s infinite;
+            font-weight: 600;
         }
 
         @keyframes pulse {
@@ -159,24 +162,24 @@
         }
 
         .open-envelope .gold-seal {
-            transform: translate3d(0, -50px, 0) scale(0);
+            transform: translate3d(0, -60px, 0) scale(0);
             opacity: 0;
         }
 
         /* -------------------------------------------
-           CONTENIDO PRINCIPAL
+            CONTENIDO PRINCIPAL
         ------------------------------------------- */
         #main-content {
             opacity: 0;
             visibility: hidden;
             transition: opacity 1.5s ease 0.6s;
-            padding-bottom: 80px;
+            padding-bottom: 90px;
             position: relative;
         }
 
         .botanical-decor {
             position: absolute;
-            width: 130px;
+            width: 160px;
             height: auto;
             opacity: 0.12;
             pointer-events: none;
@@ -197,7 +200,7 @@
         }
 
         .hero {
-            padding: 70px 20px 40px 20px;
+            padding: 80px 20px 50px 20px;
             background: var(--cream);
             position: relative;
             z-index: 1;
@@ -205,109 +208,113 @@
 
         .verse {
             font-style: italic;
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin: 0 auto 35px auto;
-            color: #444;
-            line-height: 1.6;
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            color: #333;
+            line-height: 1.7;
             padding: 0 15px;
         }
 
         .parents-section {
-            font-size: 1.1rem;
-            margin-bottom: 35px;
+            font-size: 1.3rem;
+            margin-bottom: 40px;
             letter-spacing: 1px;
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
         .parents-title {
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
             color: var(--gold);
-            margin-bottom: 12px;
-            letter-spacing: 2px;
+            margin-bottom: 14px;
+            letter-spacing: 2.5px;
             font-weight: 600;
         }
 
         .names {
             font-family: 'Alex Brush', cursive;
-            font-size: 4.5rem;
+            font-size: 5.8rem;
             color: var(--burgundy);
-            margin: 30px 0;
+            margin: 35px 0;
             font-weight: 400;
+            line-height: 1.1;
         }
 
         .names span {
             display: block;
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.9rem;
+            font-size: 2.3rem;
             color: var(--gold);
-            margin: -5px 0;
+            margin: -8px 0;
         }
 
         .date-display {
-            font-size: 1.6rem;
-            border-top: 1px solid var(--gold);
-            border-bottom: 1px solid var(--gold);
+            font-size: 2rem;
+            border-top: 1.5px solid var(--gold);
+            border-bottom: 1.5px solid var(--gold);
             display: inline-block;
-            padding: 12px 35px;
-            margin: 25px 0;
-            letter-spacing: 2px;
+            padding: 16px 45px;
+            margin: 30px 0;
+            letter-spacing: 3px;
             text-transform: uppercase;
+            font-weight: 600;
         }
 
         .countdown-container {
-            margin: 35px 0 15px 0;
+            margin: 40px 0 20px 0;
         }
-        
+
         .countdown {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 18px;
+            margin-top: 20px;
         }
 
         .time-box {
             background: white;
-            padding: 14px;
-            border-radius: 6px;
-            min-width: 75px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.03);
-            border: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 18px 16px;
+            border-radius: 8px;
+            min-width: 90px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            border: 1px solid rgba(197, 160, 89, 0.3);
         }
 
         .time-box span {
             display: block;
-            font-size: 1.7rem;
-            font-weight: 600;
+            font-size: 2.2rem;
+            font-weight: 700;
             color: var(--burgundy);
+            line-height: 1;
         }
 
         .time-box label {
             display: block;
-            font-size: 0.75rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            color: #666;
-            letter-spacing: 1px;
-            margin-top: 3px;
+            color: #555;
+            letter-spacing: 1.5px;
+            margin-top: 6px;
+            font-weight: 600;
         }
 
         /* Carrusel de Fotos */
         .slideshow-section {
-            padding: 20px 20px 50px 20px;
+            padding: 30px 20px 60px 20px;
             background: var(--cream);
             border-bottom: 1px solid rgba(197, 160, 89, 0.25);
         }
 
         .slideshow-container {
-            max-width: 450px;
+            max-width: 580px;
             position: relative;
             margin: 0 auto;
-            height: 550px;
-            border-radius: 8px;
+            height: 680px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 4px solid white;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+            border: 6px solid white;
         }
 
         .mySlides {
@@ -337,21 +344,21 @@
             position: absolute;
             top: 50%;
             width: auto;
-            padding: 16px;
-            margin-top: -22px;
+            padding: 18px 14px;
+            margin-top: -25px;
             color: white;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 22px;
             transition: 0.3s ease;
-            border-radius: 0 3px 3px 0;
+            border-radius: 0 4px 4px 0;
             user-select: none;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.35);
             text-decoration: none;
             z-index: 10;
         }
 
-        .prev { left: 0; border-radius: 0 3px 3px 0; }
-        .next { right: 0; border-radius: 3px 0 0 3px; }
+        .prev { left: 0; border-radius: 0 4px 4px 0; }
+        .next { right: 0; border-radius: 4px 0 0 4px; }
 
         .prev:hover, .next:hover {
             background-color: var(--burgundy);
@@ -359,15 +366,15 @@
 
         .dot-container {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .dot {
             cursor: pointer;
-            height: 10px;
-            width: 10px;
-            margin: 0 4px;
-            background-color: #bbb;
+            height: 13px;
+            width: 13px;
+            margin: 0 5px;
+            background-color: #ccc;
             border-radius: 50%;
             display: inline-block;
             transition: background-color 0.6s ease;
@@ -380,99 +387,186 @@
         /* Detalles e Información */
         .details {
             background-color: white;
-            padding: 70px 20px;
+            padding: 80px 20px;
             border-bottom: 1px solid rgba(197, 160, 89, 0.25);
             position: relative;
             z-index: 1;
         }
 
         .section-title {
-            font-size: 1.9rem;
+            font-size: 2.3rem;
             color: var(--burgundy);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 2.5px;
         }
 
         .location-note {
-            font-size: 1.15rem;
-            max-width: 520px;
-            margin: 0 auto 30px auto;
-            color: #555;
-            line-height: 1.6;
+            font-size: 1.35rem;
+            max-width: 620px;
+            margin: 0 auto 35px auto;
+            color: #444;
+            line-height: 1.7;
             font-style: italic;
         }
 
         .event-info {
-            font-size: 1.25rem;
-            margin-bottom: 35px;
+            font-size: 1.4rem;
+            margin-bottom: 40px;
             line-height: 1.8;
         }
 
         .info-card {
-            max-width: 480px;
-            margin: 0 auto 25px auto;
-            padding: 24px;
+            max-width: 560px;
+            margin: 0 auto 30px auto;
+            padding: 30px;
             background-color: var(--cream);
-            border: 1px solid rgba(197, 160, 89, 0.35);
-            border-radius: 8px;
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            border-radius: 10px;
             text-decoration: none;
             color: var(--charcoal);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
             display: block;
         }
 
         .info-card.interactive:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(107, 29, 47, 0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(107, 29, 47, 0.12);
             border-color: var(--burgundy);
         }
 
         .card-subtitle {
-            font-size: 0.85rem;
+            font-size: 1.05rem;
             text-transform: uppercase;
             color: var(--gold);
             letter-spacing: 2px;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .venue-name {
             font-weight: 600;
             color: var(--burgundy);
             letter-spacing: 1px;
-            font-size: 1.4rem;
+            font-size: 1.75rem;
         }
 
         .address-text {
-            font-size: 1.1rem;
-            color: #555;
-            margin-top: 6px;
+            font-size: 1.25rem;
+            color: #444;
+            margin-top: 8px;
         }
 
         .map-hint {
             display: inline-block;
-            margin-top: 14px;
-            font-size: 0.85rem;
+            margin-top: 18px;
+            font-size: 1.05rem;
             text-transform: uppercase;
             color: var(--gold);
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             font-weight: 600;
         }
 
         .schedule {
-            margin: 35px 0;
-            font-size: 1.15rem;
-            line-height: 2;
+            margin: 40px 0;
+            font-size: 1.35rem;
+            line-height: 2.2;
         }
 
         .closing-phrase {
             font-family: 'Alex Brush', cursive;
-            font-size: 2.8rem;
+            font-size: 3.5rem;
             color: var(--burgundy);
-            margin: 45px 15px 10px 15px;
+            margin: 50px 15px 10px 15px;
             line-height: 1.3;
+        }
+
+        /* Ajustes Grandes para Teléfonos / Mobile */
+        @media (max-width: 600px) {
+            body {
+                font-size: 1.35rem;
+            }
+
+            .envelope-wrapper {
+                width: 330px;
+                height: 220px;
+            }
+            .flap {
+                border-left-width: 165px;
+                border-right-width: 165px;
+                border-top-width: 120px;
+            }
+            .gold-seal {
+                left: 139px;
+                top: 95px;
+                width: 52px;
+                height: 52px;
+            }
+            .click-hint {
+                font-size: 1.25rem;
+            }
+
+            .hero {
+                padding: 50px 15px 30px 15px;
+            }
+            .verse {
+                font-size: 1.35rem;
+            }
+            .parents-section {
+                font-size: 1.2rem;
+            }
+            .names {
+                font-size: 4.8rem;
+                margin: 25px 0;
+            }
+            .names span {
+                font-size: 2rem;
+            }
+            .date-display {
+                font-size: 1.5rem;
+                padding: 12px 25px;
+                letter-spacing: 1.5px;
+            }
+
+            .countdown {
+                gap: 8px;
+            }
+            .time-box {
+                min-width: 72px;
+                padding: 12px 8px;
+            }
+            .time-box span {
+                font-size: 1.8rem;
+            }
+            .time-box label {
+                font-size: 0.8rem;
+            }
+
+            .slideshow-container {
+                width: 92vw;
+                height: 520px;
+            }
+
+            .details {
+                padding: 50px 15px;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .venue-name {
+                font-size: 1.5rem;
+            }
+            .address-text {
+                font-size: 1.15rem;
+            }
+            .schedule {
+                font-size: 1.35rem;
+                line-height: 2.2;
+            }
+            .closing-phrase {
+                font-size: 3rem;
+            }
         }
     </style>
 </head>
@@ -505,7 +599,7 @@
                 <p>Josefina Palomares Zavala  |  Angelina Piña Piña</p>
             </div>
 
-            <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; color: #555;">Tenemos el honor de invitarlos a celebrar nuestra boda</p>
+            <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.95rem; color: #555; font-weight: 600;">Tenemos el honor de invitarlos a celebrar nuestra boda</p>
             
             <h1 class="names">Fermín Rodríguez Piña <span>y</span> Lizet Puente Palomares</h1>
             
@@ -623,7 +717,7 @@
         }
 
         // Lógica del Contador
-        const targetDate = new Date("October 24, 2026 12:00:00").getTime();
+        const targetDate = new Date("October 24, 2026 14:00:00").getTime();
 
         const timer = setInterval(function() {
             const now = new Date().getTime();
@@ -643,7 +737,7 @@
 
             if (distance < 0) {
                 clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "<h3 style='color: var(--burgundy); font-size: 1.5rem;'>¡Llegó el Gran Día!</h3>";
+                document.getElementById("countdown").innerHTML = "<h3 style='color: var(--burgundy); font-size: 1.8rem;'>¡Llegó el Gran Día!</h3>";
             }
         }, 1000);
 
